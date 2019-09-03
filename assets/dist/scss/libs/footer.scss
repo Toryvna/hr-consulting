@@ -1,0 +1,169 @@
+@import "flexbox";
+.footer{
+    background-color: #ebf7ff;
+    padding: 15px 0 0;
+    &__wrapper{
+        &-item{
+            &.logotype{
+                width: 63px;
+                height: 63px;
+                background-color: #ffffff;
+                border-radius: 50%;
+                position: relative;
+                margin: 0 auto 15px;
+                .logoFooter{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                img{
+                    width: 35px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &.contacts{
+                text-align: center;
+                p,a{
+                    color: #ffb152;
+                    font-family: "GothamPro-Medium";
+                    font-size: 12px;
+                    line-height: 22.11px;
+                }
+                a{
+                    display: table;
+                    margin: 0 auto;
+                }
+                .social{
+                    @include flexbox;
+                    @include justify-content(space-between);
+                    @include align-items(center);
+                    width: 220px;
+                    margin: 0 auto;
+                    &-item{
+                        width: 36px;
+                        height: 36px;
+                        display: block;
+                        img{
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+                }
+            }
+            &.menus{
+                @include flexbox;
+                @include justify-content(center);
+                margin-top: 30px;
+                nav{
+                    margin: 0 25px;
+                    li{
+                        text-align: center;
+                        a{
+                            color: #1b2a33;
+                            font-family: "GothamPro-Medium";
+                            font-size: 12px;
+                            line-height: 22.11px;
+                            &:hover{
+                                color: #ffb152;
+                            }
+                        }
+                    }
+                }
+            }
+            &.bottom{
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px){
+    .footer{
+        &__wrapper{
+            @include flexbox;
+            @include justify-content(space-between);
+            @include flex-wrap(wrap);
+            position: relative;
+            &-item{
+                &.logotype{
+                    @include order(2);
+                    width: 100px;
+                    height: 100px;
+                    img{
+                        width: 55px;
+                    }
+                }
+                &.contacts{
+                    @include order(3);
+                    text-align: right;
+                    a{
+                        margin-right: 0;
+                    }
+                }
+                &.menus{
+                    @include order(1);
+                    nav {
+                        margin-left: 0;
+                        li{
+                            text-align: left;
+                        }
+                    }
+                }
+                &.bottom{
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .footer{
+        &__wrapper{
+            &-item{
+                &.menus {
+                    margin-top: 23px;
+                    nav {
+                        margin-right: 0;
+                        &:first-of-type{
+                            margin-right: 79px;
+                        }
+                        li {
+                            a {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+                &.contacts{
+                    margin-left: 74px;
+                    .title{
+                        font-size: 15px;
+                    }
+                    .social{
+                        margin: 5px 0 9px;
+                    }
+                    .place{
+                        font-size: 13px;
+                    }
+                    .phone{
+                        font-size: 15px;
+                    }
+                    .email{
+                        font-size: 11px;
+                    }
+                }
+                &.bottom{
+                    bottom: 8px;
+                }
+            }
+        }
+    }
+}

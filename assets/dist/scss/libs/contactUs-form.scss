@@ -1,0 +1,290 @@
+.contactForm{
+    &__heading{
+        margin-bottom: 10px;
+        h4{
+            text-align: center;
+            font-family: "GothamPro-Medium";
+            font-size: 13px;
+            line-height: 15px;
+            text-align: center;
+        }
+    }
+    &__form{
+        border-radius: 10px;
+        background-color: #ffa834;
+        padding: 15px 45px;
+        position: relative;
+        max-width: 320px;
+        margin: 0 auto;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url('../images/grades/form-img.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: 0;
+            width: 85px;
+            height: 114px;
+            top: 85px;
+            z-index: 0;
+        }
+        .title{
+            color: #ffffff;
+            font-family: "GothamPro-Medium";
+            font-size: 13px;
+            text-align: center;
+            line-height: 22.31px;
+            span{
+                display: block;
+                font-size: 10px;
+                line-height: 11px;
+            }
+        }
+        form{
+            margin: 25px 0 0;
+            .form-input{
+                width: 132px;
+                margin: 0 auto 17px;
+                input{
+                    height: 25px;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 2px solid #ffffff;
+                    background-color: transparent;
+                    color: #ffffff;
+                    font-family: "GothamPro-Medium";
+                    font-size: 10px;
+                    padding: 0 5px;
+                    text-align: center;
+                    &::-webkit-input-placeholder { 
+                        color: #ffffff;
+                    }
+                    &::-moz-placeholder { 
+                        color: #ffffff;
+                    }
+                    &:-ms-input-placeholder { 
+                        color: #ffffff;
+                    }
+                    &::-ms-input-placeholder { 
+                        color: #ffffff;
+                    }
+                    &:-moz-placeholder { 
+                        color: #ffffff;
+                    }
+                }
+            }
+            .form-textarea{
+                margin: 0 auto 17px;
+                width: 217px;
+                textarea{
+                    border-radius: 10px;
+                    border: 2px solid #ffffff;
+                    background: transparent;
+                    color: #ffffff;
+                    font-family: "GothamPro-Medium";
+                    font-size: 10px;
+                    width: 100%;
+                    height: 68px;
+                    position: relative;
+                    padding: 10px;
+                    overflow: auto;
+                    &::-webkit-input-placeholder { 
+                        color: #ffffff;
+                        text-align: center;
+                        padding-top: 15px;
+                    }
+                    &::-moz-placeholder { 
+                        color: #ffffff;
+                        text-align: center;
+                        padding-top: 15px;
+                    }
+                    &:-ms-input-placeholder { 
+                        color: #ffffff;
+                        text-align: center;
+                        padding-top: 15px;
+                    }
+                    &::-ms-input-placeholder{
+                        color: #ffffff;
+                        text-align: center;
+                        padding-top: 15px;
+                    }
+                    &:-moz-placeholder { 
+                        color: #ffffff;
+                        text-align: center;
+                        padding-top: 15px;
+                    }
+                }
+            }
+            .form-bottom{
+                text-align: center;
+                p,a{
+                    color: #ffffff;
+                    font-family: "GothamPro-Medium";
+                    font-size: 9px;
+                    i{
+                        font-size: 10px;
+                    }
+                }
+                a{
+                    &.email{
+                        pointer-events: none; 
+                        cursor: default; 
+                    }
+                }
+                button{
+                    width: 90px;
+                    height: 21px;
+                    box-shadow: 0 0 7px 1px rgba(255, 255, 255, 0.29);
+                    border-radius: 10px;
+                    // border: 1px solid #ffffff;
+                    border: none;
+                    color: #ffffff;
+                    font-size: 10px;
+                    margin-top: 13px;
+                    background: linear-gradient(to top, #ffb75f 0%, #ff9500 99%, #ff9500 100%);
+                    background: -webkit-linear-gradient(to top, #ffb75f 0%, #ff9500 99%, #ff9500 100%);
+                    background: -ms-linear-gradient(to top, #ffb75f 0%, #ff9500 99%, #ff9500 100%);
+                    background: -o-linear-gradient(to top, #ffb75f 0%, #ff9500 99%, #ff9500 100%);
+                    background: -moz-linear-gradient(to top, #ffb75f 0%, #ff9500 99%, #ff9500 100%);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .contactForm{
+        &__heading{
+            h4{
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+        &__form{
+            max-width: 975px;
+            padding: 23px 45px;
+            &::before{
+                width: 162px;
+                height: 217px;
+                top: inherit;
+                bottom: 8px;
+            }
+            .title{
+                font-size: 28px;
+                line-height: 42.73px;
+                span{
+                    font-size: 20px;
+                    line-height: 25px;
+                    padding-top: 18px;
+                }
+            }
+            form{
+                margin-top: 29px;
+                .form-wrap{
+                    @include flexbox;
+                    @include justify-content(center);
+                    margin-bottom: 31px;
+                    .form-input{
+                        margin-right: 53px;
+                        width: 251px;
+                        &:last-of-type{
+                            margin-right: 0;
+                        }
+                        input{
+                            height: 47px;
+                            font-size: 20px;
+                            text-align: left;
+                            padding-left: 18px;
+                        }
+                    }
+                }
+                .form-textarea{
+                    width: 413px;
+                    textarea{
+                        height: 128px;
+                        font-size: 20px;
+                        padding: 16px 13px;
+                        padding-top: 16px;
+                        &::-webkit-input-placeholder { 
+                            text-align: left;
+                            padding-top: 0;
+                        }
+                        &::-moz-placeholder { 
+                            text-align: left;
+                            padding-top: 0;
+                        }
+                        &:-ms-input-placeholder { 
+                            text-align: left;
+                            padding-top: 16px;
+                        }
+                        &::-ms-input-placeholder { 
+                            text-align: left;
+                            padding-top: 16px;
+                        }
+                        &:-moz-placeholder { 
+                            text-align: left;
+                            padding-top: 0;
+                        }
+                    }
+                }
+                .form-bottom{
+                    button{
+                        font-size: 17px;
+                        width: 173px;
+                        height: 40px;
+                        border-radius: 19px;
+                    }
+                    .form-info{
+                        text-align: right;
+                        position: absolute;
+                        right: 45px;   
+                        bottom: 15px;
+                        p,a{
+                            font-size: 12px;    
+                            line-height: 14px;
+                        }                 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contactForm{
+        &__heading {
+            margin-top: 40px;
+            h4{
+                font-size: 22px;
+            }
+        }
+        &__form{
+            margin-top: 50px;
+            &::before{
+                bottom: 42px;
+                left: 86px;            
+            }
+            form{
+                margin-top: 39px;
+                .form-bottom{
+                    .form-info{
+                        p,a{
+                            font-size: 14px;
+                            line-height: 20px;
+                            i{
+                                font-size: 18px;
+                                vertical-align: middle;
+                            }
+                            &.phone{
+                                i{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

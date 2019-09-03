@@ -1,0 +1,150 @@
+@import "libs/flexbox";
+@import "libs/anchorMenu";
+.searchRezult{
+    padding: 50px 0;
+    &__heading{
+        font-size: 18px;
+        color: #000000;
+        font-family: "GothamPro-Medium";
+    }
+    &__message{
+        font-size: 15px;
+        color: #000000;
+        margin-top: 30px;
+    }
+    &__wrapper{
+        @include flexbox;
+        @include align-items(flex-start);
+        @include justify-content(space-between);
+        @include flex-wrap(wrap);
+        margin-top: 25px;
+        &-item{
+            box-shadow: 2px 4px 8px 1px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+            .imgBlk{
+                height: 166px;
+                background-color: #ffffff;
+                position: relative;
+                img{
+                    position: absolute;
+                    max-width: 100%;
+                    max-height: 100%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .textBlk{
+                background-color: #ebf7ff;
+                min-height: 119px;
+                text-align: center;
+                position: relative;
+                padding: 17px 10px 45px;
+                display: flex;
+                align-items: center;
+                h3{
+                    color: #010101;
+                    font-family: "GothamPro-Medium";
+                    font-size: 16px;
+                    line-height: 22.11px;
+                    width: 100%;
+                }
+                .more{
+                    width: 140px;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+    .pagination{
+        @include flexbox;
+        @include justify-content(center);
+        margin-top: 33px;
+        max-width: 1050px;
+        li{
+            width: 30px;
+            height: 34px;
+            box-shadow: 2px 4px 8px 1px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            background-color: #ffffff;
+            text-align: center;
+            margin-right: 20px;
+            &:last-of-type{
+                margin-right: 0;
+            }
+            &.active{
+                a,span{
+                    color: #212121;
+                    font-family: "GothamPro-Medium";
+                    font-size: 24px;
+                }
+            }
+            span{
+                display: block;
+                line-height: 34px;
+                height: 100%;;
+            }
+            a{
+                color: #212121;
+                font-size: 18px;
+                display: block;
+                line-height: 34px;
+                height: 100%;;
+            }
+            &:hover{
+                a{
+                    font-family: "GothamPro-Medium";
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .searchRezult{
+        &__wrapper{
+            &-item{
+                max-width: 250px;
+                width: calc(100% / 4 - 7px);
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .searchRezult{
+        margin-top: 0;
+        padding: 61px 0 64px 10px;
+        &__heading{
+            font-size: 33px;
+        }
+        &__message{
+            font-size: 23px;
+            margin-top: 50px;
+        }
+        &__wrapper{
+            @include justify-content(flex-start);
+            margin-top: 44px;
+            &-item{
+                margin-right: 15px;
+                width: calc(100% / 4 - 15px);
+                .textBlk{
+                    h3{
+                        font-size: 18px;
+                    }
+                }
+                .more{
+                    font-size: 15px;
+                    width: 140px;
+                    padding: 9px 0;
+                }
+            }
+        }
+    }
+}

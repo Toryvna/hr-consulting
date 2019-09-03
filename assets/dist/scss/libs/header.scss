@@ -1,0 +1,323 @@
+@import 'flexbox';
+
+.header{
+    background-color: #ebf7ff;
+    padding: 23px 0;
+    &__wrap{
+        padding: 0 20px;
+        &-logo{
+            @include flexbox;
+            @include justify-content(space-between);
+            @include align-items(center);
+            .toggle-menu{
+                width: 27px;
+                height: 16px;
+                z-index: 11;
+                border: 0 none;
+                position: relative;
+                background-color: transparent;
+                cursor: pointer;
+                span {
+                    display: block;
+                }
+                .hamburger {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    z-index: 11;
+                    display: block;
+                    width: 100%;
+                    .sw-topper {
+                        position: relative;
+                        top: 0;
+                        height: 3px;
+                        background: #000;
+                        border: none;
+                        border-radius: 0;
+                        transition: all .5s;
+                        transition: all .5s;
+                        -webkit-transition: all .5s;
+                        -moz-transition: all .5s;
+                        transition: all .5s;
+                        -webkit-transition-delay: .1s;
+                        -moz-transition-delay: .1s;
+                        transition-delay: .1s;
+                    }
+                    .sw-bottom {
+                        position: relative;
+                        height: 3px;
+                        top: 4px;
+                        background: #000;
+                        border: none;
+                        border-radius: 0;
+                        transition: all .5s;
+                        transition: all .5s;
+                        -webkit-transition: all .5s;
+                        -moz-transition: all .5s;
+                        transition: all .5s;
+                        -webkit-transition-delay: .1s;
+                        -moz-transition-delay: .1s;
+                        transition-delay: .1s;
+                    }
+                    .sw-footer {
+                        position: relative;
+                        height: 3px;
+                        top: 8px;
+                        background: #000;
+                        border: none;
+                        border-radius: 0;
+                        transition: all .5s;
+                        transition: all .5s;
+                        -webkit-transition: all .5s;
+                        -moz-transition: all .5s;
+                        transition: all .5s;
+                        -webkit-transition-delay: .1s;
+                        -moz-transition-delay: .1s;
+                        transition-delay: .1s;
+                    }
+                }
+                &.active{
+                    .hamburger{
+                        .sw-topper {
+                            top: 8px;
+                            -webkit-transform: rotate(-45deg);
+                            -moz-transform: rotate(-45deg);
+                            -ms-transform: rotate(-45deg);
+                            -o-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                        }
+                        .sw-bottom {
+                            top: 5px;
+                            -webkit-transform: rotate(45deg);
+                            -moz-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            -o-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
+                        .sw-footer {
+                            opacity: 0;
+                            top: 0;
+                            -webkit-transform: rotate(180deg);
+                            -moz-transform: rotate(180deg);
+                            -ms-transform: rotate(180deg);
+                            -o-transform: rotate(180deg);
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+            .logoLink{
+                display: block;
+                img{
+                    width: 55px;
+                }
+            }
+        }
+        &-search{
+            .form-input{
+                display: none;
+                position: relative;
+                position: absolute;
+                right: 30px;
+                top: 8px;
+                z-index: 1;
+                &.show{
+                    display: block;
+                }
+            }
+            input{
+                width: 100%;
+                height: 34px;
+                border-radius: 17px;
+                background-color: #ffffff;
+                padding: 0 35px 0 10px;
+                border: none;
+            }
+            button,
+            .showSearch{
+                width: 31px;
+                height: 31px;
+                background-color: #ffac3b;
+                border-radius: 50%;
+                position: relative;
+                border: none;
+                cursor: pointer;
+                i{
+                    color: #ffffff;
+                    font-size: 17px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .showSearch{
+                z-index: 0;
+            }
+            button{
+                position: absolute;
+                right: 0;
+                top: 2px;
+            }
+        }
+        &-menu{
+            .mainMenu{
+                top: 70px;
+                left: -110%;
+                z-index: 16;
+                max-width: 140px;
+                position: absolute;
+                -webkit-transition: all 1s;
+                -moz-transition: all 1s;
+                -ms-transition: all 1s;
+                -o-transition: all 1s;
+                transition: all 1s;
+                border-radius: 0 0 10px 10px;
+                border: 1px solid #eeeeee;
+                background-color: #ffffff;
+                padding: 10px 0 0;
+                &.show {
+                    left: 10px;
+                    -webkit-transition: all 1s;
+                    -moz-transition: all 1s;
+                    -ms-transition: all 1s;
+                    -o-transition: all 1s;
+                    transition: all 1s;
+                }
+                ul{
+                    li{
+                        padding: 0 36px 0 17px;
+                        a{
+                            font-size: 15px;
+                            color: #000;
+                            line-height: 35px;
+                        }
+                        .arrow{
+                            i{
+                                font-size: 8px;
+                                vertical-align: middle;
+                                margin-left: 5px;
+                            }
+                        }
+                        &.active,
+                        &:hover{
+                            &>a{
+                                color: #ffab3b;
+                            }
+                        }
+                        &.has-sub{
+                            position: relative;
+                            &>ul{
+                                display: none;
+                                li{
+                                    padding: 5px;
+                                    a{
+                                        line-height: 15px;
+                                        font-size: 14px;
+                                        letter-spacing: -1.12px;
+                                    }
+                                }
+                            }
+                            &.open{
+                                &>ul{
+                                    display: block;
+                                    min-width: 84px;
+                                    border-radius: 0 0 10px 10px;
+                                    border: 1px solid #eeeeee;
+                                    background-color: #ffffff;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-phone{
+            display: none;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .header{
+        padding: 29px 0 20px;
+        position: static;
+        &__wrap{
+            @include flexbox;
+            @include justify-content(space-between);
+            @include align-items(center);
+            &-logo{
+                width: 90px;
+                .toggle-menu{
+                    display: none;
+                }
+            }
+            &-search {
+                .form-input{
+                    &.show{
+                        right: inherit;
+                    }
+                }
+            }
+            &-menu{
+                margin-left: 50px;
+                .mainMenu{
+                    position: static;
+                    background: transparent;
+                    max-width: 100%;
+                    padding: 0;
+                    -webkit-transition: none;
+                    -moz-transition: none;
+                    -ms-transition: none;
+                    -o-transition: none;
+                    transition: none;
+                    border: none;
+                    &>ul{
+                        @include flexbox;
+                        li{
+                            a{
+                                font-family: 'GothamPro-Medium';
+                            }
+                            &.has-sub{
+                                &:hover{
+                                    &>ul{
+                                        display: block;
+                                    }
+                                }
+                                &>ul{
+                                    position: absolute;
+                                    z-index: 5;
+                                    border-radius: 0 0 10px 10px;
+                                    border: 1px solid #eeeeee;
+                                    background-color: #ffffff;
+                                    width: 200px;
+                                    left: 0;
+                                    li{
+                                        padding: 10px 20px;
+                                    }
+                                    ul{
+                                        left: 100%;
+                                        top: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-phone{
+                display: block;
+                a{
+                    color: #000000;
+                    font-family: "GothamPro-Medium";
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

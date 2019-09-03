@@ -1,0 +1,344 @@
+@import "libs/flexbox";
+@import "libs/contactUs-form";
+@import "libs/anchorMenu";
+
+$primaryColor-blue: #b3e3ff;
+$primaryColor-yellow: #ffa834;
+$primaryColor-yellowlight: #ffcd91;
+$primaryColor-green: #def9cd;
+$primaryColor-pink: #ffcece;
+.banner{
+    text-align: center;
+    padding: 10px 0 0;
+    img{
+        height: 182px;
+        max-width: 100%;
+    }
+}
+.mainInfo{
+    margin-bottom: 30px;
+    &__heading{
+        background-color: $primaryColor-blue;
+        text-align: center;
+        padding: 3px 0;
+        h2{
+            color: #ffffff;
+            font-family: "GothamPro-Medium";
+            font-size: 13px;
+        }
+    }
+    &__wrapper{
+        .content{
+            margin: 20px 0;
+            &__item{
+                margin-bottom: 25px;
+                .title{
+                    margin-bottom: 10px;
+                    img{
+                        height: 16px;
+                        margin-right: 15px;
+                    }
+                    p{
+                        color: #ffac3b;
+                        font-family: "GothamPro-Bold";
+                        font-size: 16px;
+                        padding: 0;
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    padding-bottom: 10px;
+                    .bold{
+                        font-family: "GothamPro-Medium";
+                    }
+                }
+            }
+        }
+        .tabBlk{
+            margin-bottom: 60px;
+            .calendar{
+                margin-bottom: 25px;
+            }
+            .widgettitle{
+                display: none;
+            }
+            .calendar_wrap{
+                margin-bottom: 25px;
+                table{
+                    max-width: 375px;
+                    width: 100%;
+                    border-collapse: collapse;
+                    caption{
+                        background: #f7f7fb;
+                        border: 1px solid #e7e6ee;
+                        font-family: "GothamProNarrow-Medium";
+                        padding: 10px 0;
+                    }
+                    thead{
+                        border: 1px solid #e7e6ee;
+                        border-top: 0;
+                    }
+                    tfoot{
+                        display: none;
+                    }
+                    td{
+                        border: 1px solid #e7e6ee;
+                        text-align: center;
+                        padding: 18px 7px;
+                        a{
+                            color: #454545;
+                        }
+                        &#today{
+                            color: #ffac3b;
+                            a{
+                                color: #ffac3b;
+                            }
+                        }
+                    }
+                    th{
+                        padding: 10px 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contactForm__heading h4{
+    display: none;
+}
+.ui-button{
+    padding: 0!important;
+    &:focus,
+    &:hover{
+        border: none;
+        background: transparent;
+    }
+}
+.ui-selectmenu-button.ui-button{
+    width: auto;
+}
+.ui-selectmenu-icon.ui-icon{
+    background-image: url('../images/rightArrow.png');
+    background-position: 0 0;
+}
+.ui-selectmenu-button-open{
+    .ui-selectmenu-icon.ui-icon{
+        background-position: 4px 0px;
+        transform:rotate(90deg);  
+        -moz-transform:rotate(90deg);  
+        -webkit-transform:rotate(90deg);  
+        -o-transform:rotate(90deg);  
+        -ms-transform:rotate(90deg); 
+    }
+}
+.ui-selectmenu-button-closed{
+    .ui-selectmenu-icon.ui-icon{
+        background-position: 6px 2px;
+    }
+}
+.ui-selectmenu-text {
+    color: #1b1b1b;
+    font-family: "GothamPro";
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.ui-selectmenu-menu{
+    .ui-widget-content{
+        border-radius: 11px !important;
+        border: 1px solid #d2d2d2 !important;
+        padding: 15px !important;
+        background-color: #fff;
+        width: auto!important;
+        display: table;
+    }
+}
+.ui-selectmenu-menu {
+    display: none;
+    &.ui-selectmenu-open{
+        display: block;
+    }
+}
+.ui-menu-item{
+    line-height: 25px;
+    &:first-of-type{
+        display: none;
+    }
+}
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active {
+    margin: 0;
+    color: #ffac3b!important;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 0;
+    background: transparent;
+    font-weight: normal;
+    color: #1b1b1b;
+}
+.ui-datepicker {
+    table{
+        margin: 0;
+        thead{
+            border-left: 1px solid #e7e6ee;
+            border-right: 1px solid #e7e6ee;
+        }
+    }
+    td,th{
+        font-family: 'GothamProNarrow-Medium';
+        letter-spacing: -1.48px;
+    }
+    td{
+        border: 1px solid #e7e6ee;
+    }
+    .ui-datepicker-header{
+        background: #f7f7fb;
+        border: 1px solid #e7e6ee;
+        border-radius: 0;
+    }
+    .ui-datepicker-title{
+        font-family: 'GothamProNarrow-Medium';
+        letter-spacing: -1.48px;
+    }
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover{
+    border: none;
+    background: transparent;
+    text-align: center;
+    padding: 18px 7px;
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+    color: #ffac3b;
+}
+.ui-widget.ui-widget-content{
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    max-width: 375px;
+    width: 100%;
+}
+.ui-datepicker-next{
+    cursor: pointer;
+    span{
+        background-image: url('../images/rightArrow.png');
+        background-position: center;
+    }
+    &-hover{
+        border: none;
+        background: transparent;
+    }
+    &.ui-state-hover{
+        border: none;
+        background: transparent;
+        .ui-icon{
+            background-position: 4px 4px;
+        }
+    }
+}
+.ui-datepicker-prev{
+    cursor: pointer;
+    span{
+        background-image: url('../images/leftArrow.png');
+        background-position: center;
+    }
+    &-hover{
+        border: none;
+        background: transparent;
+    }
+    &.ui-state-hover{
+        border: none;
+        background: transparent;
+        .ui-icon{
+            background-position: 6px 4px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    .mainInfo{
+        &__heading {
+            h2{
+                font-size: 24px;
+            }
+        }
+        &__wrapper{
+            .content{
+                &__item {
+                    .title {
+                        p {
+                            font-size: 20px;
+                        }
+                    }
+                    p{
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    .banner{
+        margin-top: 0;
+        padding-bottom: 16px;
+        img{
+            height: 340px;
+        }
+    }
+    .mainInfo{
+        margin-bottom: 70px;
+        &__wrapper{
+            @include flexbox;
+            @include justify-content(space-between);
+            @include align-items(flex-start);
+            margin-top: 60px;
+            .content{
+                width: calc(100% - 400px);
+                margin: 0;
+                &__item {
+                    .title {
+                        p {
+                            font-size: 26px;
+                        }
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+            .tabBlk{
+                width: 374px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1160px){
+    .mainInfo{
+        .container{
+            width: 1140;
+        }
+        &__wrapper {
+            @include justify-content(flex-start);
+            .content {
+                width: 56%;
+                margin-right: 80px;
+                &__item {
+                    margin-bottom: 51px;
+                    .title {
+                        margin-bottom: 22px;
+                        img {
+                            height: 23px;
+                            margin-right: 26px;
+                        }
+                    }
+                    p{
+                        padding-bottom: 21px;
+                        line-height: 29px;
+                    }
+                }
+            }
+        }
+    }
+}
